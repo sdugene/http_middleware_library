@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:http_middleware/http_methods.dart';
+import 'package:http_middleware_library/http_methods.dart';
 
 class RequestData {
   Method method;

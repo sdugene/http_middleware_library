@@ -5,9 +5,9 @@ import 'package:collection/collection.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:http/io_client.dart';
-import 'package:http_middleware/http_methods.dart';
-import 'package:http_middleware/models/request_data.dart';
-import 'package:http_middleware/models/response_data.dart';
+import 'package:http_middleware_library/http_methods.dart';
+import 'package:http_middleware_library/models/request_data.dart';
+import 'package:http_middleware_library/models/response_data.dart';
 import 'middleware_contract.dart';
 
 ///Class to be used by the user to set up a new `http.Client` with middleware supported.
@@ -55,25 +55,25 @@ class HttpClientWithMiddleware extends http.BaseClient {
   }
 
   Future<Response> head(url, {Map<String, String> headers}) =>
-      _sendUnstreamed("HEAD", url, headers);
+      _sendUnStreamed("HEAD", url, headers);
 
   Future<Response> get(url, {Map<String, String> headers}) =>
-      _sendUnstreamed("GET", url, headers);
+      _sendUnStreamed("GET", url, headers);
 
   Future<Response> post(url,
           {Map<String, String> headers, body, Encoding encoding}) =>
-      _sendUnstreamed("POST", url, headers, body, encoding);
+      _sendUnStreamed("POST", url, headers, body, encoding);
 
   Future<Response> put(url,
           {Map<String, String> headers, body, Encoding encoding}) =>
-      _sendUnstreamed("PUT", url, headers, body, encoding);
+      _sendUnStreamed("PUT", url, headers, body, encoding);
 
   Future<Response> patch(url,
           {Map<String, String> headers, body, Encoding encoding}) =>
-      _sendUnstreamed("PATCH", url, headers, body, encoding);
+      _sendUnStreamed("PATCH", url, headers, body, encoding);
 
   Future<Response> delete(url, {Map<String, String> headers}) =>
-      _sendUnstreamed("DELETE", url, headers);
+      _sendUnStreamed("DELETE", url, headers);
 
   Future<String> read(url, {Map<String, String> headers}) {
     return get(url, headers: headers).then((response) {
@@ -91,7 +91,7 @@ class HttpClientWithMiddleware extends http.BaseClient {
 
   Future<StreamedResponse> send(BaseRequest request) => _client.send(request);
 
-  Future<Response> _sendUnstreamed(
+  Future<Response> _sendUnStreamed(
       String method, url, Map<String, String> headers,
       [body, Encoding encoding]) async {
     if (url is String) url = Uri.parse(url);

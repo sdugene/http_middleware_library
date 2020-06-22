@@ -1,6 +1,6 @@
 import 'dart:typed_data';
-import 'package:http_middleware/models/request_data.dart';
-import 'package:http_middleware/models/response_data.dart';
+import 'package:http_middleware_library/models/request_data.dart';
+import 'package:http_middleware_library/models/response_data.dart';
 
 ///Middleware interface to create custom middleware for http.
 ///Extend this class and override the functions that you want
