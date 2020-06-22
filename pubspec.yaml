@@ -1,11 +1,11 @@
 name: http_middleware_library
 description: A middleware library for Dart http library forked from TEDConsulting/http_middleware.
 homepage: https://github.com/sdugene/http_middleware_library
-version: 0.12.1
+version: 0.12.1+hotfix.1
 
 dependencies:
   http: ^0.12.1
-  collection: ^1.14.13
+  collection: ^1.14.12
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
