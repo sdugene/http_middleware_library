@@ -1,11 +1,17 @@
 name: http_middleware_library
 description: A middleware library for Dart http library forked from TEDConsulting/http_middleware.
 homepage: https://github.com/sdugene/http_middleware_library
-version: 0.12.1+hotfix.1
+version: 0.13.3
+
+environment:
+  flutter: ">=2.0.2 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  http: ^0.12.1
-  collection: ^1.14.12
+  #https://pub.dev/packages/http/changelog
+  http: ^0.13.3
+  #https://pub.dev/packages/collection/changelog
+  collection: 1.15.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -41,5 +47,3 @@ dependencies:
   #
   # For details regarding fonts in packages, see
   # https://flutter.io/custom-fonts/#from-packages
-environment:
-  sdk: ">=2.1.0 <3.0.0"
